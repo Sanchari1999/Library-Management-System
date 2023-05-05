@@ -4,37 +4,6 @@
 This is a library management system that allows users to perform actions based on their roles, either as a librarian or a member.
 
 ## Table Structure:
-### User Table
-| Column   | Description                                               |
-|----------|-----------------------------------------------------------|
-| id       | Unique identifier for each user                           |
-| username | Unique username for each user                             |
-| password | Password for each user                                    |
-| role     | Role of the user, which can be either LIBRARIAN or MEMBER |
-### Book Table
-| Column      | Description                                              |
-|-------------|----------------------------------------------------------|
-| id          | Unique identifier for each book                           |
-| title       | Title of the book                                         |
-| author      | Author of the book                                        |
-| description | Description of the book                                    |
-| status      | Status of the book, which can be either AVAILABLE or BORROWED |
-### Member Table
-| Column   | Description                                             |
-|----------|---------------------------------------------------------|
-| id       | Unique identifier for each member                        |
-| name     | Name of the member                                       |
-| address  | Address of the member                                    |
-| phone    | Phone number of the member                               |
-| email    | Email address of the member                              |
-### Borrowed Book Table
-| Column         | Description                                           |
-|----------------|-------------------------------------------------------|
-| id             | Unique identifier for each borrowed book              |
-| book_id        | Foreign key reference to the Book Table                |
-| member_id      | Foreign key reference to the Member Table              |
-| borrowed_date  | Date when the book is borrowed                         |
-| returned_date  | Date when the book is returned                         |
 
 
 ## Database Diagram:
