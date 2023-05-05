@@ -4,10 +4,37 @@
 This is a library management system that allows users to perform actions based on their roles, either as a librarian or a member.
 
 ## Table Structure:
+| Table: librarian               |
+|-------------------------------|
+| id          | integer         |
+| username    | string(unique)  |
+| password    | string          |
+
+| Table: member                 |
+|-------------------------------|
+| id          | integer         |
+| username    | string(unique)  |
+| password    | string          |
+
+| Table: book                   |
+|-------------------------------|
+| id          | integer         |
+| title       | string          |
+| author      | string          |
+| isbn        | string          |
+| status      | enum            |
+
+| Table: book_transaction       |
+|-------------------------------|
+| id          | integer         |
+| book_id     | integer         |
+| member_id   | integer         |
+| transaction_type | enum        |
+| transaction_date | timestamp   |
 
 
 ## Database Diagram:
-![Database Diagram](images/DatabaseDiagram.png)
+![Database Diagram](images/Database_Diagram.png)
 
 ## Technologies Used:
 - Java
