@@ -6,27 +6,31 @@ This is a library management system that allows users to perform actions based o
 ## Table Structure:
 ### Table: librarian
 #### Columns:
-- id (integer, primary key, auto-increment)
-- username (string, unique)
+- id (integer)
+- username (string)
 - password (string)
+- phonenumber (integer)
+- email (string)
 ### Table: member
 #### Columns:
-- id (integer, primary key, auto-increment)
-- username (string, unique)
+- id (integer)
+- username (string)
 - password (string)
+- phonenumber (integer)
+- email (string)
 ### Table: book
 #### Columns:
-- id (integer, primary key, auto-increment)
+- id (integer)
 - title (string)
 - author (string)
 - isbn (string)
-- status (enum: AVAILABLE, BORROWED)
+- status (AVAILABLE, BORROWED)
 ### Table: book_transaction
 #### Columns:
-- id (integer, primary key, auto-increment)
-- book_id (integer, foreign key to book.id)
-- member_id (integer, foreign key to member.id)
-- transaction_type (enum: BORROW, RETURN)
+- id (integer)
+- book_id (integer)
+- member_id (integer)
+- transaction_type (BORROW, RETURN)
 - transaction_date (timestamp)
 
 ## Database Diagram:
