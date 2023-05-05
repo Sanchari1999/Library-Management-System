@@ -10,3 +10,6 @@
 7. /borrow (POST): borrow a book (for members only)
 8. /return (POST): return a borrowed book (for members only)
 9. /deleteAccount (DELETE): delete the current user's account
+
+## Database Diagram:
+![Database Diagram](images/DatabaseDiagram.png)
