@@ -4,34 +4,30 @@
 This is a library management system that allows users to perform actions based on their roles, either as a librarian or a member.
 
 ## Table Structure:
-| Table: librarian               |
-|-------------------------------|
-| id          | integer         |
-| username    | string(unique)  |
-| password    | string          |
-
-| Table: member                 |
-|-------------------------------|
-| id          | integer         |
-| username    | string(unique)  |
-| password    | string          |
-
-| Table: book                   |
-|-------------------------------|
-| id          | integer         |
-| title       | string          |
-| author      | string          |
-| isbn        | string          |
-| status      | enum            |
-
-| Table: book_transaction       |
-|-------------------------------|
-| id          | integer         |
-| book_id     | integer         |
-| member_id   | integer         |
-| transaction_type | enum        |
-| transaction_date | timestamp   |
-
+### Table: librarian
+#### Columns:
+- id (integer, primary key, auto-increment)
+- username (string, unique)
+- password (string)
+### Table: member
+#### Columns:
+- id (integer, primary key, auto-increment)
+- username (string, unique)
+- password (string)
+### Table: book
+#### Columns:
+- id (integer, primary key, auto-increment)
+- title (string)
+- author (string)
+- isbn (string)
+- status (enum: AVAILABLE, BORROWED)
+### Table: book_transaction
+#### Columns:
+- id (integer, primary key, auto-increment)
+- book_id (integer, foreign key to book.id)
+- member_id (integer, foreign key to member.id)
+- transaction_type (enum: BORROW, RETURN)
+- transaction_date (timestamp)
 
 ## Database Diagram:
 ![Database Diagram](images/Database_Diagram.png)
