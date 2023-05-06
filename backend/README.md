@@ -33,7 +33,7 @@ This is the backend part of the Library Management System project.
 - transaction_date (timestamp)
 
 ## Database Diagram:
-![Database Diagram](images/Database_Diagram.png)
+![Database Diagram](.../images/Database_Diagram.png)
 
 ## Technologies Used:
 - Java
