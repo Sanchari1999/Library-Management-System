@@ -1,47 +1,50 @@
-/* Reset default margin and padding */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* Set basic styling for the page */
+/* Set default font family and color */
 body {
   font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  color: #333;
 }
 
+/* Style the header */
 header {
-  background-color: #333;
+  background-color: #324376;
   color: #fff;
   padding: 20px;
 }
 
+/* Style the navigation menu */
 nav ul {
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  overflow: hidden;
+  background-color: #586BA4;
 }
 
 nav li {
-  margin-right: 20px;
+  float: left;
 }
 
-nav a {
+nav li a {
+  display: block;
   color: #fff;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
 }
 
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+nav li a:hover {
+  background-color: #F5DD90;
 }
 
+/* Style the main content */
+main {
+  margin: 20px;
+}
+
+/* Style the footer */
 footer {
-  background-color: #333;
+  background-color: #586BA4;
   color: #fff;
-  padding: 20px;
   text-align: center;
+  padding: 10px;
 }
